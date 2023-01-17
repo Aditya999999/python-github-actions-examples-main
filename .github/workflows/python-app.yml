@@ -9,6 +9,14 @@ on:
   pull_request:
     branches: [ "main" ]
 
+  workflow_dispatch:
+    inputs:
+      publish-artifact:
+        description: Publish package
+        required: true
+        default: false
+        type: boolean
+
 permissions:
   contents: read
 
