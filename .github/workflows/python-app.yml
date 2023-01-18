@@ -80,5 +80,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: user/app:latest
+        tags: adityadubey9/flask_app:latest
 
