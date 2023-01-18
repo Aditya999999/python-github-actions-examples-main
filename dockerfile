@@ -9,15 +9,16 @@
 
 #CMD [ "python", "./app.py" ]
 
-FROM python:3.8-slim-buster
+FROM ubuntu
 
 COPY src/ /app
 WORKDIR /app
 
-RUN pip install --upgrade pip
-RUN pip install flask
+RUN apt update
+RUN apt install python3-pip -y
+RUN pip3 install Flask
 
-EXPOSE 5000
 
-CMD ["python", "app.py"]
+
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
 
