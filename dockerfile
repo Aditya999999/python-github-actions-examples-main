@@ -1,7 +1,7 @@
 #Dockerfile, Image, Container
 FROM python:3.10
-ADD src/app.py /src
+ADD src/app.py .
 
 RUN pip install Flask
 
-CMD [ "python", "src/app.py"]
+CMD [ "python", "app.py"]
