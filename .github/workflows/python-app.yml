@@ -81,6 +81,8 @@ jobs:
         context: .
         push: true
         tags: adityadubey9/flask_app:latest
+      run: |
+        docker pull adityadubey9/flask_app:latest
     # - 
     #   name: Build the Docker image
     #   run: |
